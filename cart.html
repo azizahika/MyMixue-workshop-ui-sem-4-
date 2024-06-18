@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>Cart</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="assets/css/responsive.css">
+	<style>
+		/* Gaya khusus untuk tombol "Apply Coupon" */
+		#apply-coupon-btn {
+			background-color: #ff0000; /* Warna latar merah */
+			color: #ffffff; /* Warna teks putih */
+			padding: 10px 20px; /* Padding di dalam tombol */
+			border: none; /* Hilangkan border */
+			border-radius: 5px; /* Tambahkan border-radius */
+			cursor: pointer; /* Pointer ketika dihover */
+			font-size: 16px; /* Ukuran font */
+		}
+	
+		/* Gaya ketika tombol dihover */
+		#apply-coupon-btn:hover {
+			background-color: #cc0000; /* Warna latar merah yang sedikit lebih gelap */
+		}
+
+		
+	</style>
+
+</head>
+<body>
+	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="index.html">
+								<img src="assets/img/logo.png" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li class="current-list-item"><a href="#">Home</a>
+									<ul class="sub-menu">
+										<li><a href="index.html">Static Home</a></li>
+										<li><a href="index_2.html">Slider Home</a></li>
+									</ul>
+								</li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="news.html">News</a>
+									<ul class="sub-menu">
+										<li><a href="news.html">News</a></li>
+									</ul>
+								</li>
+								<li><a href="contact.html">Contact</a></li>
+								<li><a href="shop.html">Shop</a>
+									<ul class="sub-menu">
+										<li><a href="shop.html">Shop</a></li>
+										<li><a href="checkout.html">Check Out</a></li>
+										<li><a href="history.html">History</a></li>
+										<li><a href="cart.html">Cart</a></li>
+									</ul>
+								</li>
+								<li>
+									<div class="header-icons">
+										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- search area -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Search For:</h3>
+							<input type="text" placeholder="Keywords">
+							<button type="submit">Search <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end search arewa -->
+	
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>LETS GO TO CHECKOUT</p>
+						<h1>Cart</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- cart -->
+	<div class="cart-section mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-md-12">
+					<div class="cart-table-wrap">
+						<table class="cart-table">
+							<thead class="cart-table-head">
+								<tr class="table-head-row">
+									<th class="product-remove"></th>
+									<th class="product-image"><strong>Product Image</strong></th>
+									<th class="product-name"><strong>Name</strong></th>
+									<th class="product-price"><strong>Price</strong></th>
+									<th class="product-quantity"><strong>Quantity</strong></th>
+									<th class="product-total"><strong>Total</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="table-body-row">
+									<td class="product-remove"><a href="#" onclick="deleteItem(event)"><i class="far fa-window-close"></i></a></td>
+									<td class="product-image"><img src="assets/img/products/menu3.png" alt=""></td>
+									<td class="product-name">Mango Mi-Sundae</td>
+									<td class="product-price">Rp.16.000</td>
+									<td class="product-quantity"><input type="number" placeholder="0"></td>
+									<td class="product-total">1</td>
+								</tr>
+								
+								<script>
+									function deleteItem(event) {
+										event.preventDefault(); // Prevent the default action of the link
+										alert("Item telah dihapus"); // Show alert/notification
+										// Add further logic here to remove the table row from the DOM if needed
+									}
+								</script>
+								
+								<tr class="table-body-row">
+									<td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
+									<td class="product-image"><img src="assets/img/products/menu12.jpg" alt=""></td>
+									<td class="product-name">Lemon Earl Grey Tea</td>
+									<td class="product-price">Rp.15.000</td>
+									<td class="product-quantity"><input type="number" placeholder="0"></td>
+									<td class="product-total">1</td>
+								</tr>
+								<tr class="table-body-row">
+									<td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
+									<td class="product-image"><img src="assets/img/products/menu6.jpg" alt=""></td>
+									<td class="product-name">Supreme Mixed Milk Tea</td>
+									<td class="product-price">Rp.24.000</td>
+									<td class="product-quantity"><input type="number" placeholder="0"></td>
+									<td class="product-total">1</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="total-section">
+						<table class="total-table">
+							<thead class="total-table-head">
+								<tr class="table-total-row">
+									<th><strong>Total</strong></th>
+									<th><strong>Price</strong></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="total-data">
+									<td><strong>Subtotal: </strong></td>
+									<td>Rp.55.000</td>
+								</tr>
+								<tr class="total-data">
+									<td><strong>Shipping: <br> (far or near the price is same) </strong></td> <br>
+									
+									<td>Rp.10.000</td>
+								</tr>
+								<tr class="total-data">
+									<td><strong>Total: </strong></td>
+									<td>Rp.65.000</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="cart-buttons">
+							<a class="boxed-btn update-cart-btn">Update Cart</a>
+							<a href="checkout.html" class="boxed-btn black">Check Out</a>
+						</div>
+						
+						<script>
+							// Ambil elemen tombol "Update Cart"
+							var updateCartBtn = document.querySelector('.update-cart-btn');
+							
+							// Tambahkan event listener untuk event klik
+							updateCartBtn.addEventListener('click', function() {
+								alert('Cart updated successfully!'); // Tampilkan notifikasi
+							});
+						</script>
+						
+						<div class="coupon-section">
+							<h3>Apply Coupon</h3>
+							<div class="coupon-form-wrap">
+								<form id="coupon-form">
+									<p><input type="text" id="coupon-input" placeholder="Coupon"></p>
+									<p><input type="button" id="apply-coupon-btn" value="Apply"></p>
+								</form>
+							</div>
+						</div>
+						
+						<script>
+							document.addEventListener('DOMContentLoaded', function() {
+								var applyCouponBtn = document.getElementById('apply-coupon-btn');
+								
+								applyCouponBtn.addEventListener('click', function(event) {
+									event.preventDefault(); // Menghentikan aksi default dari form submission
+									
+									var couponInput = document.getElementById('coupon-input').value;
+									
+									// Lakukan validasi atau aksi lain yang diinginkan di sini
+									// Misalnya, tampilkan notifikasi
+									var notification = document.createElement('div');
+									notification.textContent = 'Kupon berhasil dimasukkan';
+									notification.style.backgroundColor = 'red';
+									notification.style.color = 'white';
+									notification.style.padding = '10px';
+									notification.style.marginTop = '10px';
+									notification.style.borderRadius = '5px';
+									notification.style.textAlign = 'center';
+									
+									var couponSection = document.querySelector('.coupon-section');
+									couponSection.appendChild(notification);
+									
+									// Bersihkan input setelah kupon berhasil dimasukkan
+									document.getElementById('coupon-input').value = '';
+								});
+							});
+						</script>
+						
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<!-- end cart -->
+
+	<!-- logo carousel -->
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/1.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/2.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/3.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/4.png" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="assets/img/company-logos/5.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end logo carousel -->
+
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">About us</h2>
+						<p>Monday to Friday <br> (excluding statutory holidays)
+							<br>
+							9.00 - 12.00 PM | 13.30 - 17.30 PM
+							<br>
+							Saturday <br>  (excluding statutory holidays)
+							<br>
+							9.00 - 12.00 PM | 13.00 - 15.00 PM</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title">Get in Touch</h2>
+						<ul>
+							<p>Jl. Karang Menjangan No.117C</p>
+							<p>support@mixue.com</p>
+							<p>+031 123 444 567</p>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Pages</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="services.html">Shop</a></li>
+							<li><a href="news.html">News</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Subscribe</h2>
+						<p>Subscribe to our mailing list to get the latest updates.</p>
+						<form action="index.html">
+							<input type="email" placeholder="Email">
+							<button type="submit"><i class="fas fa-paper-plane"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+	
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>Copyrights &copy; 2024 - <a href="https://imransdesign.com/">Azizah Ika Wulandari</a>,  All Rights Reserved.<br>
+						Distributed By - <a href="https://themewagon.com/">WORKSHOP UI</a>
+					</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="https://web.facebook.com/MixueIndonesia/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://x.com/mixue_co?mx=2" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="https://www.instagram.com/mixueindonesia/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/mixue-indonesia?originalSubdomain=id" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://dribbble.com/tags/mixue" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+	
+	<!-- jquery -->
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="assets/js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="assets/js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="assets/js/sticker.js"></script>
+	<!-- main js -->
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>
